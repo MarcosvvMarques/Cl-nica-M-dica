@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Clínica CPS</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <img class="wave" src="./src/img/WhatsApp Image 2024-08-09 at 16.01.58.jpeg" alt="Background Image">
+    
+    <div class="container">
+        <div class="img">
+            <img src="./src/img/logoo-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="login-content">
+            <form id="loginForm">
+                <img src="./src/img/sup-removebg-preview.png" alt="Avatar">
+                <h2 class="title">Login</h2>
+                
+                <div class="input-div one focus">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Matrícula</h5>
+                        <input type="text" class="input" id="matricula" autocomplete="username" required>
+                    </div>
+                </div>
+                
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Senha</h5>
+                        <input type="password" class="input" id="senha" autocomplete="current-password" required>
+                    </div>
+                </div>
+                
+                <a href="#">Entrar com Token?</a>
+                <button type="submit" class="btn">Acessar</button> <!-- Alterado para submit -->
+            </form>
+        </div>
+    </div>
+	<script src="./src/js/main.js"></script>
+</body>
+</html>

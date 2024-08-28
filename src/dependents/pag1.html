@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Clínica</title>
+    <link rel="stylesheet" href="../css/pag1.css">
+</head>
+<body>
+    <h1>Gestão Clínica</h1>
+
+    <section id="add-form">
+        <h2>Adicionar Novo Registro</h2>
+        <form id="form">
+            <fieldset>
+                <legend>Médico</legend>
+                <label for="medico-crm">Número de Registro (CRM):</label>
+                <input type="text" id="medico-crm" placeholder="Digite o número do CRM" oninput="preencherMedico()" required pattern="\d{10}" title="O CRM deve ter exatamente 10 dígitos">
+                
+                <label for="medico-nome">Nome:</label>
+                <input type="text" id="medico-nome" placeholder="Nome do Médico" readonly>
+                
+                <label for="medico-especialidade">Especialidade:</label>
+                <input type="text" id="medico-especialidade" placeholder="Especialidade do Médico" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Paciente</legend>
+                <label for="paciente-nome">Nome:</label>
+                <input type="text" id="paciente-nome" required>
+                
+                <label for="paciente-nascimento">Data de Nascimento:</label>
+                <input type="date" id="paciente-nascimento" required>
+                
+                <label for="paciente-telefone">Telefone:</label>
+                <input type="tel" id="paciente-telefone" required pattern="\d+" title="Digite apenas números">
+            </fieldset>
+
+            <fieldset>
+                <legend>Consulta</legend>
+                <label for="consulta-data">Data:</label>
+                <input type="date" id="consulta-data" required>
+                
+                <label for="consulta-hora">Hora:</label>
+                <input type="time" id="consulta-hora" required>
+            </fieldset>
+
+            <button type="submit">Adicionar Consulta</button>
+        </form>
+    </section>
+
+    <section id="consultar-registro">
+        <h2>Consultar Registro</h2>
+        <label for="crm-filtro">Filtrar por CRM:</label>
+        <input type="text" id="crm-filtro" placeholder="Digite o número do CRM" pattern="\d{10}" title="O CRM deve ter exatamente 10 dígitos">
+        <button onclick="consultarRegistros()">Consultar</button>
+        <button id="minimizar-registro" onclick="minimizarConsulta()">-</button>
+        <button id="fechar-registro" onclick="fecharRegistro()">X</button>
+        <div id="resultado-consulta"></div>
+    </section>
+
+    <script src="../js/pag1.js"></script>
+</body>
+</html>
